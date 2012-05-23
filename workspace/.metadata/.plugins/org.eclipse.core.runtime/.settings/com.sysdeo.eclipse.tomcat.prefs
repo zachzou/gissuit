@@ -1,0 +1,8 @@
+computeSourcePath=true
+contextsDir=/home/zouw/f/apache-tomcat-7.0.27/conf/Catalina/localhost
+eclipse.preferences.version=1
+fixTomcatHomeBug=fixed
+tomcatConfigFile=/home/zouw/f/apache-tomcat-7.0.27/conf/server.xml
+tomcatDir=/home/zouw/f/apache-tomcat-7.0.27
+tomcatJRE=1337694447809
+tomcatVersion=tomcatV7

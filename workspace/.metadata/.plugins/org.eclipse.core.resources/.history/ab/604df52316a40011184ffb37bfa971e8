@@ -1,0 +1,14 @@
+/**
+ * 
+ */
+package com.soso.wenwen;
+
+import javax.servlet.http.HttpServlet;
+
+/**
+ * @author zouw
+ *
+ */
+public class TestServlet extends HttpServlet {
+
+}
