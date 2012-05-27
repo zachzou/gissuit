@@ -1,0 +1,869 @@
+cscope 15 $HOME/f/code/agent_daemon/src -q 0000000077 0000004195
+	@/home/zouw/code/agent_daemon/lib/agent_api.c
+
+1 
+	~<°dio.h
+>
+
+2 
+	~"agít_≠i.h
+"
+
+3 
+IãmLi°
+ *
+	gp°Iãm
+=
+NULL
+;
+
+5 
+	$show_Æl_ôem
+()
+
+7 
+i
+;
+
+9 
+i
+=0;
+
+12 i‡(
+i
+>=
+AGENT_MAX_NODE
+) ;
+
+13 i‡(
+p°Iãm
+->
+a°Node
+[
+i
+].
+iU£
+ == 0) ;
+
+15 
+	`¥ötf
+("ôem: %d vÆue: %d\n", 
+p°Iãm
+->
+a°Node
+[
+i
+].
+iIID
+,Ö°Iãm->a°Node[i].
+iCurVÆue
+);
+
+16 
+i
+++;
+
+20 
+	}
+}
+
+22 
+	$£¨ch_ôem_id
+(
+IãmLi°
+ *
+p°Iãm
+,
+ôem
+,*
+piPos
+)
+
+24 
+i
+=0;
+
+25 *
+piPos
+=0;
+
+26 
+p°Iãm
+->
+a°Node
+[
+i
+].
+iU£
+)
+
+28 if(
+p°Iãm
+->
+a°Node
+[
+i
+].
+iIID
+==
+ôem
+)
+
+30 *
+piPos
+=
+i
+;
+
+33 ++
+i
+;
+
+35 if(
+i
+>=
+AGENT_MAX_NODE
+) -1;
+
+39 *
+piPos
+ = 
+i
+;
+
+42 
+	}
+}
+
+44 
+	$do_add
+(
+ôem
+,
+iVÆue
+)
+
+46 
+ôemPos
+, 
+iRë
+;
+
+48 i‡(!
+p°Iãm
+ && (
+	`›í_shm
+((**)&p°Iãm, 
+AGENT_SHM_ID
+, (
+IãmLi°
+), 0666)) < 0)
+
+55 
+iRë
+ = 
+	`£¨ch_ôem_id
+(
+p°Iãm
+,
+ôem
+,&
+ôemPos
+);
+
+57 if(!
+iRë
+)
+
+59 
+p°Iãm
+->
+a°Node
+[
+ôemPos
+].
+iU£
+=1;
+
+60 
+p°Iãm
+->
+a°Node
+[
+ôemPos
+].
+iIID
+=
+ôem
+;
+
+61 
+p°Iãm
+->
+a°Node
+[
+ôemPos
+].
+iCurVÆue
+=
+iVÆue
+;
+
+63 if(
+iRë
+==-1)
+
+65 
+	`¥ötf
+("out of memery");
+
+70 
+p°Iãm
+->
+a°Node
+[
+ôemPos
+].
+iCurVÆue
++=
+iVÆue
+;
+
+73 
+	}
+}
+
+74 
+	$do_£t
+(
+ôem
+,
+iVÆue
+)
+
+76 
+ôemPos
+, 
+iRë
+;
+
+78 i‡(!
+p°Iãm
+&&
+	`›í_shm
+((**)&p°Iãm, 
+AGENT_SHM_ID
+, (
+IãmLi°
+), 0666) < 0)
+
+85 
+iRë
+ = 
+	`£¨ch_ôem_id
+(
+p°Iãm
+,
+ôem
+,&
+ôemPos
+);
+
+87 if(!
+iRë
+)
+
+89 
+p°Iãm
+->
+a°Node
+[
+ôemPos
+].
+iU£
+=1;
+
+90 
+p°Iãm
+->
+a°Node
+[
+ôemPos
+].
+iIID
+=
+ôem
+;
+
+91 
+p°Iãm
+->
+a°Node
+[
+ôemPos
+].
+iCurVÆue
+=
+iVÆue
+;
+
+93 if(
+iRë
+==-1)
+
+95 
+	`¥ötf
+("out of memery");
+
+100 
+p°Iãm
+->
+a°Node
+[
+ôemPos
+].
+iCurVÆue
+=
+iVÆue
+;
+
+103 
+	}
+}
+
+104 
+	$do_gë
+(
+ôem
+,*
+piVÆue
+)
+
+106 
+ôemPos
+, 
+iRë
+;
+
+108 i‡(!
+p°Iãm
+&&
+	`›í_shm
+((**)&p°Iãm, 
+AGENT_SHM_ID
+, (
+IãmLi°
+), 0666) < 0)
+
+115 
+iRë
+ = 
+	`£¨ch_ôem_id
+(
+p°Iãm
+,
+ôem
+,&
+ôemPos
+);
+
+117 if(!
+iRë
+)
+
+119 *
+piVÆue
+ = 0;
+
+122 if(
+iRë
+==-1)
+
+124 
+	`¥ötf
+("out of memery");
+
+125 *
+piVÆue
+ = 0;
+
+130 *
+piVÆue
+ = 
+p°Iãm
+->
+a°Node
+[
+ôemPos
+].
+iCurVÆue
+;
+
+133 
+	}
+}
+
+	@/home/zouw/code/agent_daemon/lib/agent_api.h
+
+1 
+	~"oi_shm.h
+"
+
+2 #i‚de‡
+_AGENT_API_H
+
+
+3 
+	#_AGENT_API_H
+
+
+	)
+
+4 
+	#AGENT_SHM_ID
+ 24555
+
+	)
+
+5 
+	#AGENT_MAX_NODE
+ 100
+
+	)
+
+9 
+	miU£
+;
+
+10 
+	miIID
+;
+
+11 
+	miCur
+;
+
+12 } 
+	tIãmNode
+;
+
+16 
+IãmNode
+ 
+	ma°Node
+[
+AGENT_MAX_NODE
+];
+
+17 } 
+	tIãmLi°
+;
+
+19 
+do_add
+(
+iid
+,
+iVÆ
+);
+
+21 
+do_£t
+(
+iid
+,
+iVÆ
+);
+
+22 
+do_gë
+(
+iid
+,*
+piVÆ
+);
+
+	@/home/zouw/code/agent_daemon/lib/shm_util.c
+
+1 
+	~<sys/mm™.h
+>
+
+2 
+	~<°dio.h
+>
+
+3 
+	~<°rög.h
+>
+
+4 
+	~"shm_utû.h
+"
+
+6 * 
+	$gë_shm
+(
+iKey
+, 
+iSize
+, 
+iFœg
+)
+
+8 
+key_t
+ 
+key
+;
+
+9 
+iShmID
+;
+
+10 * 
+sShm
+;
+
+11 
+sEºMsg
+[50];
+
+13 i‡((
+iShmID
+ = 
+	`shmgë
+(
+iKey
+, 
+iSize
+, 
+iFœg
+)) < 0) {
+
+14 
+	`•rötf
+(
+sEºMsg
+, "shmgë %d %d", 
+iKey
+, 
+iSize
+);
+
+15 
+	`≥º‹
+(
+sEºMsg
+);
+
+16  
+NULL
+;
+
+18 i‡((
+sShm
+ = 
+	`shm©
+(
+iShmID
+, 
+NULL
+ ,0)) == (*) -1) {
+
+19 
+	`≥º‹
+("shmat");
+
+20  
+NULL
+;
+
+22  
+sShm
+;
+
+23 
+	}
+}
+
+25 
+	$›í_shm
+(**
+p°Shm
+, 
+iShmKey
+, 
+iSize
+, 
+iFœg
+)
+
+27 * 
+sShm
+;
+
+29 i‡(!(
+sShm
+ = 
+	`gë_shm
+(
+iShmKey
+, 
+iSize
+, 
+iFœg
+ & (~
+IPC_CREAT
+)))) {
+
+30 i‡(!(
+iFœg
+ & 
+IPC_CREAT
+))  -1;
+
+31 i‡(!(
+sShm
+ = 
+	`gë_shm
+(
+iShmKey
+, 
+iSize
+, 
+iFœg
+)))  -1;
+
+33 
+	`mem£t
+(
+sShm
+, 0, 
+iSize
+);
+
+35 *
+p°Shm
+ = 
+sShm
+;
+
+37 
+	}
+}
+
+	@/home/zouw/code/agent_daemon/lib/shm_util.h
+
+2 #i‚de‡
+_SHM_UTIL_H
+
+
+3 
+	#_SHM_UTIL_H
+
+
+	)
+
+5 
+	~<sys/ùc.h
+>
+
+6 
+	~<sys/shm.h
+>
+
+8 * 
+gë_shm
+(
+iKey
+, 
+iSize
+, 
+iFœg
+);
+
+9 
+›í_shm
+(**
+p°Shm
+, 
+iShmKey
+, 
+iSize
+, 
+iFœg
+);
+
+	@/home/zouw/code/agent_daemon/src/agent_main.cpp
+
+9 
+	~<io°ªam
+>
+
+10 
+	~<°rög
+>
+
+11 
+	~<sys/shm.h
+>
+
+12 
+	~<sys/ùc.h
+>
+
+14 
+usög
+ 
+«me•a˚
+ 
+	g°d
+;
+
+17 
+	#SHM_KEY
+ 0x123456
+
+	)
+
+18 
+	#MAX_
+
+
+	)
+
+20 
+typdef
+ struct {
+
+21 
+°rög
+ 
+	mho°ù
+;
+
+22 
+öt32_t
+ 
+	mp‹t
+;
+
+23 
+öt32_t
+ 
+	mshm_key
+;
+
+24 
+öt32_t
+ 
+	möãrvÆ
+;
+
+25 }
+	gG_VAR
+;
+
+26 
+G_VAR
+ 
+	gg_v¨
+;
+
+29 
+	mfunc_«me
+[32];
+
+30 
+	mfunc_cou¡
+;
+
+33 
+	töô_c⁄f
+(){
+
+36 
+	}
+}
+
+38 
+	töô_d©a
+(){
+
+40 i‡(
+g_v¨
+.
+shm_key
+=
+	`shmgë
+(
+SHM_KEY
+, ))
+
+41 i‡(
+	`shmgë
+(
+SHM_KEY
+, 
+IPC_CREAT
+))
+
+42 
+	}
+}
+
+44 
+	tmaö
+(
+	t¨gc
+, * 
+	t¨gv
+[]){
+
+46 
+	`öô_c⁄f
+();
+
+48 
+	`öô_d©a
+();
+
+51 
+	}
+}
+
+	@/home/zouw/code/agent_daemon/src/agent_test.cpp
+
+1 
+	~"agít_≠i.h
+"
+
+3 
+	$maö
+(
+¨gc
+, * 
+¨gv
+[]){
+
+5 
+	`do_add
+("test", 1);
+
+8 
+	}
+}
+
+	@
+1
+.
+0
+6
+274
+/home/zouw/code/agent_daemon/lib/agent_api.c
+/home/zouw/code/agent_daemon/lib/agent_api.h
+/home/zouw/code/agent_daemon/lib/shm_util.c
+/home/zouw/code/agent_daemon/lib/shm_util.h
+/home/zouw/code/agent_daemon/src/agent_main.cpp
+/home/zouw/code/agent_daemon/src/agent_test.cpp
